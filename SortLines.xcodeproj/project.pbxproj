@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886FC12D212B5A260067A24F /* Array+RemoveDuplicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */; };
+		886FC12F212B5A930067A24F /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */; };
+		886FC130212B5B690067A24F /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */; };
+		886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC131212B5C410067A24F /* SortLinesCommand.swift */; };
+		886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
+		886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
+		886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13D212B652A0067A24F /* PrettifierTests.swift */; };
 		D72EFE642122FBC6009E4A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE632122FBC6009E4A17 /* AppDelegate.swift */; };
 		D72EFE662122FBC6009E4A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE652122FBC6009E4A17 /* ViewController.swift */; };
 		D72EFE682122FBC6009E4A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72EFE672122FBC6009E4A17 /* Assets.xcassets */; };
@@ -56,6 +63,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicatesTests.swift"; sourceTree = "<group>"; };
+		886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
+		886FC131212B5C410067A24F /* SortLinesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortLinesCommand.swift; sourceTree = "<group>"; };
+		886FC13A212B64BD0067A24F /* Prettifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prettifier.swift; sourceTree = "<group>"; };
+		886FC13D212B652A0067A24F /* PrettifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettifierTests.swift; sourceTree = "<group>"; };
 		D72EFE602122FBC6009E4A17 /* SortLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortLines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE632122FBC6009E4A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72EFE652122FBC6009E4A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +155,8 @@
 			children = (
 				D77F0EB3212703880040703D /* LinesSorterTests.swift */,
 				D77F0EB8212706B60040703D /* LinesSequenceBuilderTests.swift */,
+				886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */,
+				886FC13D212B652A0067A24F /* PrettifierTests.swift */,
 				D72EFE782122FBC6009E4A17 /* Info.plist */,
 			);
 			path = SortLinesTests;
@@ -159,12 +173,13 @@
 		D72EFE892122FBD7009E4A17 /* SourceEditorExtension */ = {
 			isa = PBXGroup;
 			children = (
-				D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */,
-				D72EFE8C2122FBD7009E4A17 /* SourceEditorCommand.swift */,
-				D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */,
 				D77F0EBE212707540040703D /* Core */,
-				D72EFE8E2122FBD7009E4A17 /* Info.plist */,
+				D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */,
+				886FC131212B5C410067A24F /* SortLinesCommand.swift */,
+				D72EFE8C2122FBD7009E4A17 /* SourceEditorCommand.swift */,
+				D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */,
 				D72EFE8F2122FBD7009E4A17 /* SourceEditorExtension.entitlements */,
+				D72EFE8E2122FBD7009E4A17 /* Info.plist */,
 			);
 			path = SourceEditorExtension;
 			sourceTree = "<group>";
@@ -172,8 +187,10 @@
 		D77F0EBE212707540040703D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D77F0EB52127044A0040703D /* LinesSorter.swift */,
+				886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */,
 				D77F0EBB212707510040703D /* LinesSequenceBuilder.swift */,
+				D77F0EB52127044A0040703D /* LinesSorter.swift */,
+				886FC13A212B64BD0067A24F /* Prettifier.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -317,9 +334,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */,
+				886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */,
 				D77F0EBC212707510040703D /* LinesSequenceBuilder.swift in Sources */,
+				886FC130212B5B690067A24F /* Array+RemoveDuplicates.swift in Sources */,
 				D77F0EB9212706B60040703D /* LinesSequenceBuilderTests.swift in Sources */,
 				D77F0EB62127044A0040703D /* LinesSorter.swift in Sources */,
+				886FC12D212B5A260067A24F /* Array+RemoveDuplicatesTests.swift in Sources */,
 				D77F0EB4212703880040703D /* LinesSorterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77F0EBD212707510040703D /* LinesSequenceBuilder.swift in Sources */,
+				886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */,
+				886FC12F212B5A930067A24F /* Array+RemoveDuplicates.swift in Sources */,
 				D72EFE8B2122FBD7009E4A17 /* SourceEditorExtension.swift in Sources */,
+				886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */,
 				D72EFE8D2122FBD7009E4A17 /* SourceEditorCommand.swift in Sources */,
 				D77F0EB72127044A0040703D /* LinesSorter.swift in Sources */,
 				D77F0EB02126FEC70040703D /* SortImportsCommand.swift in Sources */,
@@ -485,7 +509,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = SortLines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +531,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = SortLines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,7 +591,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,7 +613,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
