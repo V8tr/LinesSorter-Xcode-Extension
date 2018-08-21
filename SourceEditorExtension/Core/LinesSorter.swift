@@ -9,19 +9,17 @@
 import Foundation
 
 struct LinesSorter {
-    
-	func sort(lines inputLines: NSMutableArray, filter: (String) -> Bool, comparator: (String, String) -> Bool) {
+
+	func sort(_ inputLines: NSMutableArray, in range: CountableClosedRange<Int>, by comparator: (String, String) -> Bool) {
+		guard range.upperBound < inputLines.count, range.lowerBound >= 0 else {
+			return
+		}
+
         let lines = inputLines.compactMap { $0 as? String }
+        let sorted = Array(lines[range]).sorted(by: comparator)
         
-        guard let importsRange = LinesSequenceBuilder().rangeOfSequence(matching: filter, from: lines) else {
-            return
-        }
-        
-        let imports = lines[importsRange.start...importsRange.end]
-        let sortedImports = Array(imports).filter(filter).sorted(by: comparator)
-        
-        for lineIndex in importsRange.start...importsRange.end {
-            inputLines[lineIndex] = sortedImports[lineIndex - importsRange.start]
+        for lineIndex in range {
+            inputLines[lineIndex] = sorted[lineIndex - range.lowerBound]
         }
 	}
 }

@@ -10,12 +10,7 @@ import Foundation
 
 struct LinesSequenceBuilder {
 
-	struct Range: Equatable {
-		let start: Int
-		let end: Int
-	}
-
-	func rangeOfSequence(matching isMatching: (String) -> Bool, from lines: [String]) -> Range? {
+	func rangeOfSequence(matching isMatching: (String) -> Bool, from lines: [String]) -> CountableClosedRange<Int>? {
 		var start: Int?
 		var end: Int?
 
@@ -33,7 +28,7 @@ struct LinesSequenceBuilder {
 		}
 
 		if let start = start, let end = end {
-			return Range(start: start, end: end)
+			return start...end
 		} else {
 			return nil
 		}

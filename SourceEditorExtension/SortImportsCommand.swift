@@ -11,30 +11,14 @@ import XcodeKit
 
 class SortImportsCommand: NSObject, XCSourceEditorCommand {
 
-    enum Error: LocalizedError {
-        case notFound
-        
-        var localizedDescription: String {
-            switch self {
-            case .notFound:
-                return "Not import statements found"
-            }
-        }
-    }
-
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void ) -> Void {
-//        Prettifier().prettify(lines: invocation.buffer.lines)
-        LinesSorter().sort(lines: invocation.buffer.lines, filter: { $0.contains("import") }, comparator: <)
+		let isImportLine = { (line: String) in line.contains("import") }
+		let bridgedLines = invocation.buffer.lines.compactMap { $0 as? String }
+
+		if let range = LinesSequenceBuilder().rangeOfSequence(matching: isImportLine, from: bridgedLines) {
+			Prettifier().prettify(invocation.buffer.lines, in: range)
+		}
 
 		completionHandler(nil)
-	}
-
-	private func lastImportLineIndex(lines: [String]) -> Int? {
-		for (index, line) in lines.reversed().enumerated() {
-			if line.contains("import") {
-				return lines.count - index
-			}
-		}
-		return nil
 	}
 }

@@ -6,15 +6,14 @@
 //  Copyright © 2018 Vadim Bulavin. All rights reserved.
 //
 
-import Accelerate
 import AppKit
+import VideoToolbox
+import VideoToolbox
 import AudioToolbox
+import Accelerate
 import Cocoa
 import CoreGraphics
 import Security
-import VideoToolbox
-
-import VideoToolbox
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

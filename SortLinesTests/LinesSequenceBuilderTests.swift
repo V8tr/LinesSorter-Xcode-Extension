@@ -16,7 +16,7 @@ class LinesSequenceBuilderTests: XCTestCase {
 
 		let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.contains("A") }, from: lines)
 
-		XCTAssertEqual(range, LinesSequenceBuilder.Range(start: 0, end: 1))
+		XCTAssertEqual(range, 0...1)
 	}
 
 	func test_rangeOfSequence_rangeAtTheEndOfSequence_rangeIsCorrect() {
@@ -24,7 +24,7 @@ class LinesSequenceBuilderTests: XCTestCase {
 
 		let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.contains("B") }, from: lines)
 
-		XCTAssertEqual(range, LinesSequenceBuilder.Range(start: 1, end: 2))
+		XCTAssertEqual(range, 1...2)
 	}
 
 	func test_rangeOfSequence_multipleRanges_firstRangeIsSelected() {
@@ -32,7 +32,7 @@ class LinesSequenceBuilderTests: XCTestCase {
 
 		let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.contains("A") }, from: lines)
 
-		XCTAssertEqual(range, LinesSequenceBuilder.Range(start: 0, end: 1))
+		XCTAssertEqual(range, 0...1)
 	}
 
 	func test_rangeOfSequence_noRanges_resultIsNil() {

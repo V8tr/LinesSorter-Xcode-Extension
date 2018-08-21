@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		886FC12D212B5A260067A24F /* Array+RemoveDuplicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */; };
-		886FC12F212B5A930067A24F /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */; };
-		886FC130212B5B690067A24F /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */; };
+		886FC12D212B5A260067A24F /* Array+DuplicatesElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12C212B5A260067A24F /* Array+DuplicatesElementsTests.swift */; };
+		886FC12F212B5A930067A24F /* Array+DuplicatesElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */; };
+		886FC130212B5B690067A24F /* Array+DuplicatesElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */; };
 		886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC131212B5C410067A24F /* SortLinesCommand.swift */; };
 		886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
 		886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
@@ -20,7 +20,6 @@
 		D72EFE6B2122FBC6009E4A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EFE692122FBC6009E4A17 /* Main.storyboard */; };
 		D72EFE882122FBD7009E4A17 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72EFE872122FBD7009E4A17 /* Cocoa.framework */; };
 		D72EFE8B2122FBD7009E4A17 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */; };
-		D72EFE8D2122FBD7009E4A17 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE8C2122FBD7009E4A17 /* SourceEditorCommand.swift */; };
 		D72EFE922122FBD7009E4A17 /* SourceEditorExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D72EFE852122FBD7009E4A17 /* SourceEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D77F0EB02126FEC70040703D /* SortImportsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */; };
 		D77F0EB4212703880040703D /* LinesSorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F0EB3212703880040703D /* LinesSorterTests.swift */; };
@@ -63,8 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicatesTests.swift"; sourceTree = "<group>"; };
-		886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
+		886FC12C212B5A260067A24F /* Array+DuplicatesElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DuplicatesElementsTests.swift"; sourceTree = "<group>"; };
+		886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DuplicatesElements.swift"; sourceTree = "<group>"; };
 		886FC131212B5C410067A24F /* SortLinesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortLinesCommand.swift; sourceTree = "<group>"; };
 		886FC13A212B64BD0067A24F /* Prettifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prettifier.swift; sourceTree = "<group>"; };
 		886FC13D212B652A0067A24F /* PrettifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettifierTests.swift; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		D72EFE852122FBD7009E4A17 /* SourceEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SourceEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE872122FBD7009E4A17 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
-		D72EFE8C2122FBD7009E4A17 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		D72EFE8E2122FBD7009E4A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D72EFE8F2122FBD7009E4A17 /* SourceEditorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceEditorExtension.entitlements; sourceTree = "<group>"; };
 		D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortImportsCommand.swift; sourceTree = "<group>"; };
@@ -153,9 +151,9 @@
 		D72EFE752122FBC6009E4A17 /* SortLinesTests */ = {
 			isa = PBXGroup;
 			children = (
-				D77F0EB3212703880040703D /* LinesSorterTests.swift */,
+				886FC12C212B5A260067A24F /* Array+DuplicatesElementsTests.swift */,
 				D77F0EB8212706B60040703D /* LinesSequenceBuilderTests.swift */,
-				886FC12C212B5A260067A24F /* Array+RemoveDuplicatesTests.swift */,
+				D77F0EB3212703880040703D /* LinesSorterTests.swift */,
 				886FC13D212B652A0067A24F /* PrettifierTests.swift */,
 				D72EFE782122FBC6009E4A17 /* Info.plist */,
 			);
@@ -176,7 +174,6 @@
 				D77F0EBE212707540040703D /* Core */,
 				D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */,
 				886FC131212B5C410067A24F /* SortLinesCommand.swift */,
-				D72EFE8C2122FBD7009E4A17 /* SourceEditorCommand.swift */,
 				D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */,
 				D72EFE8F2122FBD7009E4A17 /* SourceEditorExtension.entitlements */,
 				D72EFE8E2122FBD7009E4A17 /* Info.plist */,
@@ -187,7 +184,7 @@
 		D77F0EBE212707540040703D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				886FC12E212B5A930067A24F /* Array+RemoveDuplicates.swift */,
+				886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */,
 				D77F0EBB212707510040703D /* LinesSequenceBuilder.swift */,
 				D77F0EB52127044A0040703D /* LinesSorter.swift */,
 				886FC13A212B64BD0067A24F /* Prettifier.swift */,
@@ -271,6 +268,7 @@
 					};
 					D72EFE842122FBD7009E4A17 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -337,10 +335,10 @@
 				886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */,
 				886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */,
 				D77F0EBC212707510040703D /* LinesSequenceBuilder.swift in Sources */,
-				886FC130212B5B690067A24F /* Array+RemoveDuplicates.swift in Sources */,
+				886FC130212B5B690067A24F /* Array+DuplicatesElements.swift in Sources */,
 				D77F0EB9212706B60040703D /* LinesSequenceBuilderTests.swift in Sources */,
 				D77F0EB62127044A0040703D /* LinesSorter.swift in Sources */,
-				886FC12D212B5A260067A24F /* Array+RemoveDuplicatesTests.swift in Sources */,
+				886FC12D212B5A260067A24F /* Array+DuplicatesElementsTests.swift in Sources */,
 				D77F0EB4212703880040703D /* LinesSorterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,10 +349,9 @@
 			files = (
 				D77F0EBD212707510040703D /* LinesSequenceBuilder.swift in Sources */,
 				886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */,
-				886FC12F212B5A930067A24F /* Array+RemoveDuplicates.swift in Sources */,
+				886FC12F212B5A930067A24F /* Array+DuplicatesElements.swift in Sources */,
 				D72EFE8B2122FBD7009E4A17 /* SourceEditorExtension.swift in Sources */,
 				886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */,
-				D72EFE8D2122FBD7009E4A17 /* SourceEditorCommand.swift in Sources */,
 				D77F0EB72127044A0040703D /* LinesSorter.swift in Sources */,
 				D77F0EB02126FEC70040703D /* SortImportsCommand.swift in Sources */,
 			);
@@ -509,7 +506,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 77XLZWT28S;
+				DEVELOPMENT_TEAM = BG5NSSX25D;
 				INFOPLIST_FILE = SortLines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +528,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 77XLZWT28S;
+				DEVELOPMENT_TEAM = BG5NSSX25D;
 				INFOPLIST_FILE = SortLines/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,11 +584,12 @@
 		D72EFE942122FBD7009E4A17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 77XLZWT28S;
+				DEVELOPMENT_TEAM = BG5NSSX25D;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,6 +600,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -609,11 +609,12 @@
 		D72EFE952122FBD7009E4A17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 77XLZWT28S;
+				DEVELOPMENT_TEAM = BG5NSSX25D;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,6 +625,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
