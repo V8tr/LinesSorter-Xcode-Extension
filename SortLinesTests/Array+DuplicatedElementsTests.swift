@@ -1,5 +1,5 @@
 //
-//  Array+DuplicatesElements.swift
+//  Array+DuplicatedElements.swift
 //  SortLinesTests
 //
 //  Created by Vadim Bulavin on 8/20/18.
@@ -9,9 +9,9 @@
 import XCTest
 @testable import SortLines
 
-class ArrayDuplicatesElementsTests: XCTestCase
+class ArrayDuplicatedElementsTests: XCTestCase
 {
 	func test_duplicatesElementsIndices() {
-		XCTAssertEqual(["A", "A", "B", "B", "A"].duplicatesElementsIndices, Set([1, 3, 4]))
+		XCTAssertEqual(["A", "A", "B", "B", "A"].duplicatedElementsIndices, Set([1, 3, 4]))
 	}
 }

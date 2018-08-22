@@ -13,9 +13,10 @@ class SortImportsCommand: NSObject, XCSourceEditorCommand {
 
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void ) -> Void {
 		let isImportLine = { (line: String) in line.contains("import") }
+		let isBlank = { (line: String) in line.isBlank }
 		let bridgedLines = invocation.buffer.lines.compactMap { $0 as? String }
 
-		if let range = LinesSequenceBuilder().rangeOfSequence(matching: isImportLine, from: bridgedLines) {
+		if let range = LinesSequenceBuilder().rangeOfSequence(matching: isImportLine, ignoreWhenInMiddle: isBlank, from: bridgedLines) {
 			Prettifier().prettify(invocation.buffer.lines, in: range)
 		}
 

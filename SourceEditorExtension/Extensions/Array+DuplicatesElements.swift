@@ -10,7 +10,7 @@ import Foundation
 
 extension Array where Element: Equatable {
 
-	var duplicatesElementsIndices: Set<Int> {
+	var duplicatedElementsIndices: Set<Int> {
 		var result: [Element] = []
 		var indices = Set<Int>()
 		for (index, value) in self.enumerated() {
@@ -20,6 +20,7 @@ extension Array where Element: Equatable {
 				indices.insert(index)
 			}
 		}
+		print(indices)
 		return indices
 	}
 }

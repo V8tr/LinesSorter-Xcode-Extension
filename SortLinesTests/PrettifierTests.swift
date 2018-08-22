@@ -43,4 +43,44 @@ class PrettifierTests: XCTestCase {
 
 		XCTAssertEqual(lines, ["A"])
 	}
+
+	func test_prettifier_duplicatedLines_removesDuplicatesInRange() {
+		let lines = NSMutableArray(array: ["A", "A", "B", "B"])
+
+		Prettifier().prettify(lines, in: 0...1)
+
+		XCTAssertEqual(lines, ["A", "B", "B"])
+	}
+
+	func test_prettifier_rangeGreaterThanLinesSize_snapsToBounds() {
+		let lines = NSMutableArray(array: ["B", "A"])
+
+		Prettifier().prettify(lines, in: 0...10)
+
+		XCTAssertEqual(lines, ["A", "B"])
+	}
+
+	func test_prettifier_emptyInput_doesNotModifyInput() {
+		let lines = NSMutableArray()
+
+		Prettifier().prettify(lines, in: 0...0)
+
+		XCTAssertEqual(lines, [])
+	}
+
+	func test_prettifier_smallerRange_prettifiesLinesInRange() {
+		let lines = NSMutableArray(array: ["IGNORED B", "IGNORED A", "C", "   A ", " A", "B", "IGNORED Z", "IGNORED A"])
+
+		Prettifier().prettify(lines, in: 2...5)
+
+		XCTAssertEqual(lines, ["IGNORED B", "IGNORED A", "A", "B", "C", "IGNORED Z", "IGNORED A"])
+	}
+
+	func test_prettifier_removesNewLinesInTheMiddle() {
+		let lines = NSMutableArray(array: ["A", "\n", "A"])
+
+		Prettifier().prettify(lines, in: 0...3)
+
+		XCTAssertEqual(lines, ["A"])
+	}
 }
