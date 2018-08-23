@@ -28,6 +28,7 @@ script:
       -scheme "$TRAVIS_XCODE_SCHEME"
       -sdk "$XCODE_SDK"
       -destination "$XCODE_DESTINATION"
+      -configuration Debug
 matrix:
   include:
     - xcode_scheme: "LinesSorter"

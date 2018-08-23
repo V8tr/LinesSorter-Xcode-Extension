@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <CodeCoverageTargets>
@@ -52,9 +53,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D72EFE712122FBC6009E4A17"
-            BuildableName = "LinesSorterTests.xctest"
-            BlueprintName = "LinesSorterTests"
+            BlueprintIdentifier = "D72EFE5F2122FBC6009E4A17"
+            BuildableName = "LinesSorter.app"
+            BlueprintName = "LinesSorter"
             ReferencedContainer = "container:LinesSorter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,15 +72,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D72EFE712122FBC6009E4A17"
-            BuildableName = "LinesSorterTests.xctest"
-            BlueprintName = "LinesSorterTests"
+            BlueprintIdentifier = "D72EFE5F2122FBC6009E4A17"
+            BuildableName = "LinesSorter.app"
+            BlueprintName = "LinesSorter"
             ReferencedContainer = "container:LinesSorter.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
