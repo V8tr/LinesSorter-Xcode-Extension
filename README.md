@@ -15,10 +15,10 @@
 
 ## Features
 
-⚒ No longer hack your Xcode to install custom plugins.  
-⌨️ Sort and tidy import statements with a single shortcut.  
-📃 Sort any selected lines of code: long constant definitions, enum cases, localized strings etc.  
-⚡️ Fast, tested, secure.  
+[X] No longer hack your Xcode to install custom plugins ⚒.     
+[X] Sort and tidy import statements with a single shortcut ⌨️.    
+[X] Sort any selected lines of code: long constant definitions, enum cases, localized strings etc 📃.  
+[X] Fast, tested, secure ⚡️.  
 
 ## Examples
 
