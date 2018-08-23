@@ -12,14 +12,12 @@ import XcodeKit
 class SortImportsCommand: NSObject, XCSourceEditorCommand {
 
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void ) -> Void {
-		let isImportLine = { (line: String) in line.contains("import") }
-		let isBlank = { (line: String) in line.isBlank }
+		defer { completionHandler(nil) }
+
 		let bridgedLines = invocation.buffer.lines.compactMap { $0 as? String }
 
-		if let range = LinesSequenceBuilder().rangeOfSequence(matching: isImportLine, ignoreWhenInMiddle: isBlank, from: bridgedLines) {
+		if let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.isImportLine }, ignoreWhenInMiddle: { $0.isBlank }, from: bridgedLines) {
 			Prettifier().prettify(invocation.buffer.lines, in: range)
 		}
-
-		completionHandler(nil)
 	}
 }

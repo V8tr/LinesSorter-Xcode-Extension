@@ -1,5 +1,5 @@
 //
-//  String+Blank.swift
+//  String+Ext.swift
 //  SourceEditorExtension
 //
 //  Created by Vadym Bulavin on 8/22/18.
@@ -11,5 +11,9 @@ import Foundation
 extension String {
 	var isBlank: Bool {
 		return trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+	}
+
+	var isImportLine: Bool {
+		return contains("import")
 	}
 }

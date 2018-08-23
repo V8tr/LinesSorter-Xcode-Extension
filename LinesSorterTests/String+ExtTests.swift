@@ -1,5 +1,5 @@
 //
-//  String+BlankTests.swift
+//  String+ExtTests.swift
 //  LinesSorterTests
 //
 //  Created by Vadym Bulavin on 8/22/18.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class String_BlankTests: XCTestCase {
+class String_ExtTests: XCTestCase {
 
     func test_isBlank() {
         XCTAssertTrue("".isBlank)
@@ -16,4 +16,11 @@ class String_BlankTests: XCTestCase {
 		XCTAssertTrue("\n".isBlank)
 		XCTAssertFalse("123".isBlank)
     }
+
+	func test_isImportLine() {
+		XCTAssertFalse("".isImportLine)
+		XCTAssertFalse("i m p o r t".isImportLine)
+		XCTAssertTrue("import".isImportLine)
+		XCTAssertTrue("        import   ABC".isImportLine)
+	}
 }
