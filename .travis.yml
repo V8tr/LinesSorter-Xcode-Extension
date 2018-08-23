@@ -41,7 +41,9 @@
 
 
 language: swift
+xcode_scheme: LinesSorterTests
+xcode_destination: "platform=OS X,arch=x86_64"
 script: 
   - set -o pipefail
-  - xcodebuild -project LinesSorter.xcodeproj -scheme "LinesSorterTests" -destination "platform=OS X,arch=x86_64" -configuration Debug build-for-testing
-  - xcodebuild -project LinesSorter.xcodeproj -scheme "LinesSorterTests" -destination "platform=OS X,arch=x86_64" -configuration Debug test-without-building
+  - xcodebuild -project LinesSorter.xcodeproj -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESTINATION" -configuration Debug build-for-testing
+  - xcodebuild -project LinesSorter.xcodeproj -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESTINATION" -configuration Debug test-without-building
