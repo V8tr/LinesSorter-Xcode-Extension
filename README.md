@@ -5,8 +5,6 @@
 </p>
 
 <p align="center">
-    <a href="https://dashboard.buddybuild.com/apps/58ff19a79a06210001d14c2d/build/latest?branch=master">
-        <img src="https://dashboard.buddybuild.com/api/statusImage?appID=58ff19a79a06210001d14c2d&branch=master&build=latest" />
     <a href="https://travis-ci.org/V8tr/LinesSorter-Xcode-Extension/branches">
         <img src="https://img.shields.io/travis/V8tr/LinesSorter-Xcode-Extension/master.svg" alt="Travis status" />
     </a>
