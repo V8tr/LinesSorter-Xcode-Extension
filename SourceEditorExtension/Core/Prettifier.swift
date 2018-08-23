@@ -15,24 +15,21 @@ struct Prettifier {
 			return
 		}
 
-		var range = saneRange(lines, range)
+		var range = range
+			.omittingFirstAndLastNewLine(in: lines)
+			.saneRange(for: lines.count)
 
-		trimWhitespaces(lines: lines, in: range)
+		trimWhitespaces(from: lines, in: range)
 
 		let linesRemoved = removeBlankLinesInMiddle(lines: lines, in: range)
 		range = range.lowerBound...(range.upperBound - linesRemoved)
 
 		LinesSorter().sort(lines, in: range, by: <)
+
 		removeDuplicates(from: lines, in: range)
 	}
 
-	private func saneRange(_ lines: NSMutableArray, _ range: CountableClosedRange<Int>) -> CountableClosedRange<Int> {
-		let lowerBound = max(range.lowerBound, 0)
-		let upperBound = min(range.upperBound, max(0, lines.count - 1))
-		return lowerBound...upperBound
-	}
-
-	private func trimWhitespaces(lines: NSMutableArray, in range: CountableClosedRange<Int>) {
+	private func trimWhitespaces(from lines: NSMutableArray, in range: CountableClosedRange<Int>) {
 		for lineIndex in range where lines[lineIndex] is String {
 			lines[lineIndex] = (lines[lineIndex] as! String).trimmingCharacters(in: .whitespaces)
 		}
@@ -60,5 +57,26 @@ struct Prettifier {
 			.duplicatedElementsIndices
 			.map { $0 + range.lowerBound }
 			.forEach(lines.removeObject(at:))
+	}
+}
+
+private extension CountableClosedRange where Bound == Int {
+	func saneRange(for elementsCount: Int) -> CountableClosedRange<Bound> {
+		let lowerBound = Swift.max(self.lowerBound, 0)
+		let upperBound = Swift.min(self.upperBound, Swift.max(0, elementsCount - 1))
+		return lowerBound...upperBound
+	}
+
+	func omittingFirstAndLastNewLine(in lines: NSMutableArray) -> CountableClosedRange<Int> {
+		guard lines.count > 2,
+			let first = lines.firstObject as? String,
+			let last = lines.lastObject as? String else {
+				return self
+		}
+
+		let lowerBound = first.trimmingCharacters(in: .newlines).isEmpty ? self.lowerBound + 1 : self.lowerBound
+		let upperBound = last.trimmingCharacters(in: .newlines).isEmpty ? self.upperBound - 1 : self.upperBound
+
+		return lowerBound...upperBound
 	}
 }

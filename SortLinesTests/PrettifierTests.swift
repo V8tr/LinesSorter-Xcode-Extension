@@ -83,4 +83,12 @@ class PrettifierTests: XCTestCase {
 
 		XCTAssertEqual(lines, ["A"])
 	}
+
+	func test_prettifier_doesNotRemoveFirstAndLastNewLines() {
+		let lines = NSMutableArray(array: ["\n", "A", "\n"])
+
+		Prettifier().prettify(lines, in: 0...2)
+
+		XCTAssertEqual(lines, ["\n", "A", "\n"])
+	}
 }
