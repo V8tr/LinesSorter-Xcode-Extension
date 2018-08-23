@@ -11,7 +11,7 @@
     </a>
 </p>
 
-*Lines Sorter* is an Xcode Source Editor extension that makes it easy to keep your import statements and any other enumerations of code look tidy, uniform and easy-to-read.
+**Lines Sorter** is an Xcode Source Editor extension that makes it easy to keep your import statements and any other enumerations of code look tidy, uniform and easy-to-read.
 
 ## Features
 
