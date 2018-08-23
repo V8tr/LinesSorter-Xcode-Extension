@@ -17,7 +17,7 @@
 
 - [X] ⚒ No longer hack your Xcode to install custom plugins.     
 - [X] ⌨️ Sort and tidy import statements with a single shortcut.    
-- [X] 📃 Sort any selected lines of code: long constant definitions, enum cases, localized strings etc.  
+- [X] 📃 Sort any selected lines of code: long constants definitions, enum cases, localized strings etc.  
 - [X] ⚡️ Fast, tested, secure.  
 
 ## Examples
