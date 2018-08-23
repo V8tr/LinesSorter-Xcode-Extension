@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SortLines.xcodeproj">
+      location = "self:/Users/vadymb/Projects/SortLines/LinesSorter.xcodeproj">
    </FileRef>
 </Workspace>

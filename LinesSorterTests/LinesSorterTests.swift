@@ -1,15 +1,15 @@
 //
 //  LinesSorterTests.swift
-//  SortLinesTests
+//  LinesSorterTests
 //
 //  Created by Vadym Bulavin on 8/17/18.
 //  Copyright © 2018 Vadim Bulavin. All rights reserved.
 //
 
 import XCTest
-@testable import SortLines
+@testable import LinesSorter
 
-class SortLinesTests: XCTestCase {
+class LinesSorterTests: XCTestCase {
 
     func test_sort_doesNotModifySortedInput() {
         let lines = NSMutableArray(array: ["A1", "A2", "B"])

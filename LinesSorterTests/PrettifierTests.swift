@@ -1,13 +1,13 @@
 //
 //  PrettifierTests.swift
-//  SortLinesTests
+//  LinesSorterTests
 //
 //  Created by Vadim Bulavin on 8/21/18.
 //  Copyright © 2018 Vadim Bulavin. All rights reserved.
 //
 
 import XCTest
-@testable import SortLines
+@testable import LinesSorter
 
 class PrettifierTests: XCTestCase {
 

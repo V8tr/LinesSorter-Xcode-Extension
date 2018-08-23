@@ -10,7 +10,7 @@
 		886FC12D212B5A260067A24F /* Array+DuplicatedElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12C212B5A260067A24F /* Array+DuplicatedElementsTests.swift */; };
 		886FC12F212B5A930067A24F /* Array+DuplicatesElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */; };
 		886FC130212B5B690067A24F /* Array+DuplicatesElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */; };
-		886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC131212B5C410067A24F /* SortLinesCommand.swift */; };
+		886FC132212B5C410067A24F /* SortSelectedLinesCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC131212B5C410067A24F /* SortSelectedLinesCommand.swift */; };
 		886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
 		886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
 		886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13D212B652A0067A24F /* PrettifierTests.swift */; };
@@ -69,17 +69,17 @@
 /* Begin PBXFileReference section */
 		886FC12C212B5A260067A24F /* Array+DuplicatedElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DuplicatedElementsTests.swift"; sourceTree = "<group>"; };
 		886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DuplicatesElements.swift"; sourceTree = "<group>"; };
-		886FC131212B5C410067A24F /* SortLinesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortLinesCommand.swift; sourceTree = "<group>"; };
+		886FC131212B5C410067A24F /* SortSelectedLinesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSelectedLinesCommand.swift; sourceTree = "<group>"; };
 		886FC13A212B64BD0067A24F /* Prettifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prettifier.swift; sourceTree = "<group>"; };
 		886FC13D212B652A0067A24F /* PrettifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettifierTests.swift; sourceTree = "<group>"; };
-		D72EFE602122FBC6009E4A17 /* SortLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortLines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72EFE602122FBC6009E4A17 /* LinesSorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinesSorter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE632122FBC6009E4A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72EFE652122FBC6009E4A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D72EFE672122FBC6009E4A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72EFE6A2122FBC6009E4A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D72EFE6C2122FBC6009E4A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D72EFE6D2122FBC6009E4A17 /* SortLines.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SortLines.entitlements; sourceTree = "<group>"; };
-		D72EFE722122FBC6009E4A17 /* SortLinesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortLinesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72EFE6D2122FBC6009E4A17 /* LinesSorter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LinesSorter.entitlements; sourceTree = "<group>"; };
+		D72EFE722122FBC6009E4A17 /* LinesSorterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinesSorterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE782122FBC6009E4A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D72EFE852122FBD7009E4A17 /* SourceEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SourceEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE872122FBD7009E4A17 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -126,8 +126,8 @@
 		D72EFE572122FBC6009E4A17 = {
 			isa = PBXGroup;
 			children = (
-				D72EFE622122FBC6009E4A17 /* SortLines */,
-				D72EFE752122FBC6009E4A17 /* SortLinesTests */,
+				D72EFE622122FBC6009E4A17 /* LinesSorter */,
+				D72EFE752122FBC6009E4A17 /* LinesSorterTests */,
 				D72EFE892122FBD7009E4A17 /* SourceEditorExtension */,
 				D72EFE862122FBD7009E4A17 /* Frameworks */,
 				D72EFE612122FBC6009E4A17 /* Products */,
@@ -137,14 +137,14 @@
 		D72EFE612122FBC6009E4A17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D72EFE602122FBC6009E4A17 /* SortLines.app */,
-				D72EFE722122FBC6009E4A17 /* SortLinesTests.xctest */,
+				D72EFE602122FBC6009E4A17 /* LinesSorter.app */,
+				D72EFE722122FBC6009E4A17 /* LinesSorterTests.xctest */,
 				D72EFE852122FBD7009E4A17 /* SourceEditorExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D72EFE622122FBC6009E4A17 /* SortLines */ = {
+		D72EFE622122FBC6009E4A17 /* LinesSorter */ = {
 			isa = PBXGroup;
 			children = (
 				D72EFE632122FBC6009E4A17 /* AppDelegate.swift */,
@@ -152,12 +152,12 @@
 				D72EFE672122FBC6009E4A17 /* Assets.xcassets */,
 				D72EFE692122FBC6009E4A17 /* Main.storyboard */,
 				D72EFE6C2122FBC6009E4A17 /* Info.plist */,
-				D72EFE6D2122FBC6009E4A17 /* SortLines.entitlements */,
+				D72EFE6D2122FBC6009E4A17 /* LinesSorter.entitlements */,
 			);
-			path = SortLines;
+			path = LinesSorter;
 			sourceTree = "<group>";
 		};
-		D72EFE752122FBC6009E4A17 /* SortLinesTests */ = {
+		D72EFE752122FBC6009E4A17 /* LinesSorterTests */ = {
 			isa = PBXGroup;
 			children = (
 				886FC12C212B5A260067A24F /* Array+DuplicatedElementsTests.swift */,
@@ -168,7 +168,7 @@
 				D7E05733212DAB1700FCBD7C /* NSRange+ExtTests.swift */,
 				D72EFE782122FBC6009E4A17 /* Info.plist */,
 			);
-			path = SortLinesTests;
+			path = LinesSorterTests;
 			sourceTree = "<group>";
 		};
 		D72EFE862122FBD7009E4A17 /* Frameworks */ = {
@@ -185,7 +185,7 @@
 				D77F0EBE212707540040703D /* Core */,
 				D7E0572E212DA67F00FCBD7C /* Extensions */,
 				D77F0EAF2126FEC70040703D /* SortImportsCommand.swift */,
-				886FC131212B5C410067A24F /* SortLinesCommand.swift */,
+				886FC131212B5C410067A24F /* SortSelectedLinesCommand.swift */,
 				D72EFE8A2122FBD7009E4A17 /* SourceEditorExtension.swift */,
 				D72EFE8F2122FBD7009E4A17 /* SourceEditorExtension.entitlements */,
 				D72EFE8E2122FBD7009E4A17 /* Info.plist */,
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D72EFE5F2122FBC6009E4A17 /* SortLines */ = {
+		D72EFE5F2122FBC6009E4A17 /* LinesSorter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D72EFE7B2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "SortLines" */;
+			buildConfigurationList = D72EFE7B2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "LinesSorter" */;
 			buildPhases = (
 				D72EFE5C2122FBC6009E4A17 /* Sources */,
 				D72EFE5D2122FBC6009E4A17 /* Frameworks */,
@@ -230,14 +230,14 @@
 			dependencies = (
 				D72EFE912122FBD7009E4A17 /* PBXTargetDependency */,
 			);
-			name = SortLines;
+			name = LinesSorter;
 			productName = SortLines;
-			productReference = D72EFE602122FBC6009E4A17 /* SortLines.app */;
+			productReference = D72EFE602122FBC6009E4A17 /* LinesSorter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D72EFE712122FBC6009E4A17 /* SortLinesTests */ = {
+		D72EFE712122FBC6009E4A17 /* LinesSorterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D72EFE7E2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "SortLinesTests" */;
+			buildConfigurationList = D72EFE7E2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "LinesSorterTests" */;
 			buildPhases = (
 				D72EFE6E2122FBC6009E4A17 /* Sources */,
 				D72EFE6F2122FBC6009E4A17 /* Frameworks */,
@@ -248,9 +248,9 @@
 			dependencies = (
 				D72EFE742122FBC6009E4A17 /* PBXTargetDependency */,
 			);
-			name = SortLinesTests;
+			name = LinesSorterTests;
 			productName = SortLinesTests;
-			productReference = D72EFE722122FBC6009E4A17 /* SortLinesTests.xctest */;
+			productReference = D72EFE722122FBC6009E4A17 /* LinesSorterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D72EFE842122FBD7009E4A17 /* SourceEditorExtension */ = {
@@ -293,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D72EFE5B2122FBC6009E4A17 /* Build configuration list for PBXProject "SortLines" */;
+			buildConfigurationList = D72EFE5B2122FBC6009E4A17 /* Build configuration list for PBXProject "LinesSorter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -306,8 +306,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D72EFE5F2122FBC6009E4A17 /* SortLines */,
-				D72EFE712122FBC6009E4A17 /* SortLinesTests */,
+				D72EFE5F2122FBC6009E4A17 /* LinesSorter */,
+				D72EFE712122FBC6009E4A17 /* LinesSorterTests */,
 				D72EFE842122FBD7009E4A17 /* SourceEditorExtension */,
 			);
 		};
@@ -375,7 +375,7 @@
 				886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */,
 				886FC12F212B5A930067A24F /* Array+DuplicatesElements.swift in Sources */,
 				D72EFE8B2122FBD7009E4A17 /* SourceEditorExtension.swift in Sources */,
-				886FC132212B5C410067A24F /* SortLinesCommand.swift in Sources */,
+				886FC132212B5C410067A24F /* SortSelectedLinesCommand.swift in Sources */,
 				D77F0EB72127044A0040703D /* LinesSorter.swift in Sources */,
 				D77F0EB02126FEC70040703D /* SortImportsCommand.swift in Sources */,
 				D7E05732212DAAB500FCBD7C /* NSRange+Ext.swift in Sources */,
@@ -388,7 +388,7 @@
 /* Begin PBXTargetDependency section */
 		D72EFE742122FBC6009E4A17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D72EFE5F2122FBC6009E4A17 /* SortLines */;
+			target = D72EFE5F2122FBC6009E4A17 /* LinesSorter */;
 			targetProxy = D72EFE732122FBC6009E4A17 /* PBXContainerItemProxy */;
 		};
 		D72EFE912122FBD7009E4A17 /* PBXTargetDependency */ = {
@@ -528,17 +528,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SortLines/SortLines.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LinesSorter/LinesSorter.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = BG5NSSX25D;
-				INFOPLIST_FILE = SortLines/Info.plist;
+				INFOPLIST_FILE = LinesSorter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLines;
+				PRODUCT_BUNDLE_IDENTIFIER = "v8tr.lines-sorter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -550,17 +550,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SortLines/SortLines.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LinesSorter/LinesSorter.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = BG5NSSX25D;
-				INFOPLIST_FILE = SortLines/Info.plist;
+				INFOPLIST_FILE = LinesSorter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLines;
+				PRODUCT_BUNDLE_IDENTIFIER = "v8tr.lines-sorter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -574,16 +574,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SortLinesTests/Info.plist;
+				INFOPLIST_FILE = LinesSorterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLinesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = v8tr.LinesSorterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortLines.app/Contents/MacOS/SortLines";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinesSorter.app/Contents/MacOS/LinesSorter";
 			};
 			name = Debug;
 		};
@@ -594,16 +594,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SortLinesTests/Info.plist;
+				INFOPLIST_FILE = LinesSorterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLinesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = v8tr.LinesSorterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SortLines.app/Contents/MacOS/SortLines";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinesSorter.app/Contents/MacOS/LinesSorter";
 			};
 			name = Release;
 		};
@@ -622,7 +622,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLines.SourceEditorExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "v8tr.lines-sorter.SourceEditorExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -647,7 +647,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = v8tr.SortLines.SourceEditorExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "v8tr.lines-sorter.SourceEditorExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -659,7 +659,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D72EFE5B2122FBC6009E4A17 /* Build configuration list for PBXProject "SortLines" */ = {
+		D72EFE5B2122FBC6009E4A17 /* Build configuration list for PBXProject "LinesSorter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D72EFE792122FBC6009E4A17 /* Debug */,
@@ -668,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D72EFE7B2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "SortLines" */ = {
+		D72EFE7B2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "LinesSorter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D72EFE7C2122FBC6009E4A17 /* Debug */,
@@ -677,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D72EFE7E2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "SortLinesTests" */ = {
+		D72EFE7E2122FBC6009E4A17 /* Build configuration list for PBXNativeTarget "LinesSorterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D72EFE7F2122FBC6009E4A17 /* Debug */,

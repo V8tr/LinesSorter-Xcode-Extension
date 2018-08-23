@@ -1,5 +1,5 @@
 //
-//  SortLinesCommand.swift
+//  LinesSorterCommand.swift
 //  SourceEditorExtension
 //
 //  Created by Vadim Bulavin on 8/20/18.
@@ -9,7 +9,7 @@
 import Foundation
 import XcodeKit
 
-class SortLinesCommand: NSObject, XCSourceEditorCommand {
+class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
 
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void ) -> Void {
 		defer { completionHandler(nil) }

@@ -1,6 +1,6 @@
 //
 //  Prettifier.swift
-//  SortLines
+//  LinesSorter
 //
 //  Created by Vadim Bulavin on 8/21/18.
 //  Copyright © 2018 Vadim Bulavin. All rights reserved.
