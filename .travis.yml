@@ -41,4 +41,7 @@
 
 
 language: swift
-script: xcodebuild -project LinesSorter.xcodeproj -scheme LinesSorter -configuration Release test-without-building
+env:
+    matrix:
+    - XCODE_SCHEME="LinesSorterTests" XCODE_DESTINATION="platform=OS X,arch=x86_64"
+script: xcodebuild -project LinesSorter.xcodeproj -scheme "$XCODE_SCHEME" -destination "$XCODE_DESTINATION" -configuration Release test-without-building
