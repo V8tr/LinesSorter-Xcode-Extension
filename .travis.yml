@@ -1,0 +1,4 @@
+language: swift
+xcode_project: LinesSorter.xcodeproj
+xcode_scheme: LinesSorterTests
+xcode_destination: platform=macOS
