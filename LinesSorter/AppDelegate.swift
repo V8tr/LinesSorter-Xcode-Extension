@@ -7,13 +7,6 @@
 //
 
 import AppKit
-import VideoToolbox
-import VideoToolbox
-import AudioToolbox
-import Accelerate
-import Cocoa
-import CoreGraphics
-import Security
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

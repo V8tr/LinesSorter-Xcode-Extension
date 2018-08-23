@@ -30,9 +30,6 @@ class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
 
 		LinesSorter().sort(invocation.buffer.lines, in: range, by: <)
 
-		os_log("Range upper: %d", range.upperBound)
-		os_log("Lines: %@", invocation.buffer.lines)
-
 		let lastSelectedLine = invocation.buffer.lines[range.upperBound] as? String
 
 		firstSelection.start.column = 0

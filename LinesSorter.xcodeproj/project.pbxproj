@@ -14,6 +14,9 @@
 		886FC13B212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
 		886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13A212B64BD0067A24F /* Prettifier.swift */; };
 		886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13D212B652A0067A24F /* PrettifierTests.swift */; };
+		886FC140212F60530067A24F /* CountableClosedRange+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13F212F60530067A24F /* CountableClosedRange+Ext.swift */; };
+		886FC141212F60530067A24F /* CountableClosedRange+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC13F212F60530067A24F /* CountableClosedRange+Ext.swift */; };
+		886FC143212F60640067A24F /* CountableClosedRange+ExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC142212F60640067A24F /* CountableClosedRange+ExtTests.swift */; };
 		D72EFE642122FBC6009E4A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE632122FBC6009E4A17 /* AppDelegate.swift */; };
 		D72EFE662122FBC6009E4A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EFE652122FBC6009E4A17 /* ViewController.swift */; };
 		D72EFE682122FBC6009E4A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72EFE672122FBC6009E4A17 /* Assets.xcassets */; };
@@ -72,6 +75,8 @@
 		886FC131212B5C410067A24F /* SortSelectedLinesCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortSelectedLinesCommand.swift; sourceTree = "<group>"; };
 		886FC13A212B64BD0067A24F /* Prettifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prettifier.swift; sourceTree = "<group>"; };
 		886FC13D212B652A0067A24F /* PrettifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettifierTests.swift; sourceTree = "<group>"; };
+		886FC13F212F60530067A24F /* CountableClosedRange+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountableClosedRange+Ext.swift"; sourceTree = "<group>"; };
+		886FC142212F60640067A24F /* CountableClosedRange+ExtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountableClosedRange+ExtTests.swift"; sourceTree = "<group>"; };
 		D72EFE602122FBC6009E4A17 /* LinesSorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinesSorter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72EFE632122FBC6009E4A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72EFE652122FBC6009E4A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,11 +166,12 @@
 			isa = PBXGroup;
 			children = (
 				886FC12C212B5A260067A24F /* Array+DuplicatedElementsTests.swift */,
+				886FC142212F60640067A24F /* CountableClosedRange+ExtTests.swift */,
 				D77F0EB8212706B60040703D /* LinesSequenceBuilderTests.swift */,
 				D77F0EB3212703880040703D /* LinesSorterTests.swift */,
+				D7E05733212DAB1700FCBD7C /* NSRange+ExtTests.swift */,
 				886FC13D212B652A0067A24F /* PrettifierTests.swift */,
 				D7E0572F212DA6BC00FCBD7C /* String+ExtTests.swift */,
-				D7E05733212DAB1700FCBD7C /* NSRange+ExtTests.swift */,
 				D72EFE782122FBC6009E4A17 /* Info.plist */,
 			);
 			path = LinesSorterTests;
@@ -207,8 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				886FC12E212B5A930067A24F /* Array+DuplicatesElements.swift */,
-				D7E0572B212DA66900FCBD7C /* String+Ext.swift */,
+				886FC13F212F60530067A24F /* CountableClosedRange+Ext.swift */,
 				D7E05731212DAAB500FCBD7C /* NSRange+Ext.swift */,
+				D7E0572B212DA66900FCBD7C /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,9 +365,11 @@
 				886FC13E212B652A0067A24F /* PrettifierTests.swift in Sources */,
 				D77F0EBC212707510040703D /* LinesSequenceBuilder.swift in Sources */,
 				886FC130212B5B690067A24F /* Array+DuplicatesElements.swift in Sources */,
+				886FC140212F60530067A24F /* CountableClosedRange+Ext.swift in Sources */,
 				D7E0572D212DA67000FCBD7C /* String+Ext.swift in Sources */,
 				D77F0EB9212706B60040703D /* LinesSequenceBuilderTests.swift in Sources */,
 				D77F0EB62127044A0040703D /* LinesSorter.swift in Sources */,
+				886FC143212F60640067A24F /* CountableClosedRange+ExtTests.swift in Sources */,
 				886FC12D212B5A260067A24F /* Array+DuplicatedElementsTests.swift in Sources */,
 				D7E05734212DAB1700FCBD7C /* NSRange+ExtTests.swift in Sources */,
 				D77F0EB4212703880040703D /* LinesSorterTests.swift in Sources */,
@@ -374,6 +383,7 @@
 				D77F0EBD212707510040703D /* LinesSequenceBuilder.swift in Sources */,
 				886FC13C212B64BD0067A24F /* Prettifier.swift in Sources */,
 				886FC12F212B5A930067A24F /* Array+DuplicatesElements.swift in Sources */,
+				886FC141212F60530067A24F /* CountableClosedRange+Ext.swift in Sources */,
 				D72EFE8B2122FBD7009E4A17 /* SourceEditorExtension.swift in Sources */,
 				886FC132212B5C410067A24F /* SortSelectedLinesCommand.swift in Sources */,
 				D77F0EB72127044A0040703D /* LinesSorter.swift in Sources */,
@@ -533,7 +543,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = LinesSorter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,7 +566,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = LinesSorter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -628,7 +638,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,7 +664,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BG5NSSX25D;
+				DEVELOPMENT_TEAM = 77XLZWT28S;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
