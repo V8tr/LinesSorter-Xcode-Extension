@@ -1,7 +1,26 @@
 # language: swift
-xcode_project: LinesSorter.xcodeproj
-xcode_scheme: LinesSorterTests
+# xcode_project: LinesSorter.xcodeproj
+# xcode_scheme: LinesSorterTests
 # xcode_destination: platform=macOS
+
+
+# language: swift
+# script:
+#   - set -o pipefail
+#   - xcodebuild $XCODE_ACTION
+#       -scheme "$TRAVIS_XCODE_SCHEME"
+#       -sdk "$XCODE_SDK"
+#       -destination "$XCODE_DESTINATION"
+# matrix:
+#   include:
+#     - xcode_scheme: "LinesSorterTests"
+#       osx_image: xcode9.4
+#       env:
+#         - XCODE_ACTION=test
+#         - XCODE_SDK=macosx
+#         - XCODE_DESTINATION="arch=x86_64"
+
+
 language: swift
 script:
   - set -o pipefail
@@ -11,7 +30,7 @@ script:
       -destination "$XCODE_DESTINATION"
 matrix:
   include:
-    - xcode_scheme: "LinesSorterTests"
+    - xcode_scheme: "LinesSorter"
       osx_image: xcode9.4
       env:
         - XCODE_ACTION=test
