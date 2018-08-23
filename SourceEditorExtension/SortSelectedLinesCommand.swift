@@ -8,6 +8,7 @@
 
 import Foundation
 import XcodeKit
+import os
 
 class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
 
@@ -25,9 +26,14 @@ class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
 			return
 		}
 
-		LinesSorter().sort(invocation.buffer.lines, in: firstSelection.start.line...lastSelection.end.line, by: <)
+		let range = (firstSelection.start.line...lastSelection.end.line).saneRange(for: invocation.buffer.lines.count)
 
-		let lastSelectedLine = invocation.buffer.lines[lastSelection.end.line] as? String
+		LinesSorter().sort(invocation.buffer.lines, in: range, by: <)
+
+		os_log("Range upper: %d", range.upperBound)
+		os_log("Lines: %@", invocation.buffer.lines)
+
+		let lastSelectedLine = invocation.buffer.lines[range.upperBound] as? String
 
 		firstSelection.start.column = 0
 		lastSelection.end.column = lastSelectedLine?.count ?? 0

@@ -59,24 +59,3 @@ struct Prettifier {
 			.forEach(lines.removeObject(at:))
 	}
 }
-
-private extension CountableClosedRange where Bound == Int {
-	func saneRange(for elementsCount: Int) -> CountableClosedRange<Bound> {
-		let lowerBound = Swift.max(self.lowerBound, 0)
-		let upperBound = Swift.min(self.upperBound, Swift.max(0, elementsCount - 1))
-		return lowerBound...upperBound
-	}
-
-	func omittingFirstAndLastNewLine(in lines: NSMutableArray) -> CountableClosedRange<Int> {
-		guard lines.count > 2,
-			let first = lines.firstObject as? String,
-			let last = lines.lastObject as? String else {
-				return self
-		}
-
-		let lowerBound = first.trimmingCharacters(in: .newlines).isEmpty ? self.lowerBound + 1 : self.lowerBound
-		let upperBound = last.trimmingCharacters(in: .newlines).isEmpty ? self.upperBound - 1 : self.upperBound
-
-		return lowerBound...upperBound
-	}
-}
