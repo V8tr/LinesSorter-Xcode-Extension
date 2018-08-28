@@ -36,6 +36,6 @@ INSERT STEPS + SCREENSHOT
 
 ## Feedback
 
-Pull requests and issues are warmly welcome.
+Pull requests, issues and suggestions are warmly welcome.
 
 Feel free to contact me [@V8tr on Twitter](https://twitter.com/johnsundell).
