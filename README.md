@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="Design/icon.png" width="300" max-width="50%" alt="Lines Sorter" />
+    <img src="Design/icon.png" width="200" max-width="50%" alt="Lines Sorter" />
 </p>
 
 # Lines Sorter
