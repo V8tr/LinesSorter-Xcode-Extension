@@ -8,7 +8,6 @@
 
 import Foundation
 import XcodeKit
-import os
 
 class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
 

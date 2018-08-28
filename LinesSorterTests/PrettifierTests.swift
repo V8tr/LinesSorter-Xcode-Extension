@@ -92,7 +92,6 @@ class PrettifierTests: XCTestCase {
 		XCTAssertEqual(lines, ["\n", "A", "\n"])
 	}
     
-    // FIXME: Implement feature
     func test_prettifier_removesTrailingNewLinesAndLeavesOne() {
         let lines = NSMutableArray(array: ["\n", "A", "\n", "\n", "\n"])
         
@@ -101,7 +100,6 @@ class PrettifierTests: XCTestCase {
         XCTAssertEqual(lines, ["\n", "A", "\n"])
     }
     
-    // FIXME: Implement feature
     func test_prettifier_removesLeadingNewLinesAndLeavesOne() {
         let lines = NSMutableArray(array: ["\n",  "\n", "\n", "A", "\n"])
         

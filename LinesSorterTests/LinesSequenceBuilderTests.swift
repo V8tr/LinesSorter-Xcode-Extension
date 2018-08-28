@@ -27,7 +27,7 @@ class LinesSequenceBuilderTests: XCTestCase {
 		XCTAssertEqual(range, 1...2)
 	}
 
-	func test_rangeOfSequence_multipleRanges_firstRangeIsSelected() {
+	func test_rangeOfSequence_rangeAtTheBeginningOfSequence_rangeIsCorrect() {
 		let lines = ["A", "A", "B", "A"]
 
 		let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.contains("A") }, from: lines)
@@ -53,16 +53,6 @@ class LinesSequenceBuilderTests: XCTestCase {
 		let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.contains("A") }, from: ["A"])
 
 		XCTAssertEqual(range, 0...0)
-	}
-
-	func test_rangeOfSequence_appliesIgnoreWhenInMiddleFilter() {
-		let range = LinesSequenceBuilder().rangeOfSequence(
-			matching: { $0.contains("A") },
-			ignoreWhenInMiddle: { $0.contains(" ") },
-			from: ["A", " ", "A"]
-		)
-
-		XCTAssertEqual(range, 0...2)
 	}
 
 	func test_rangeOfSequence_leadingAndTrailingNewLines() {

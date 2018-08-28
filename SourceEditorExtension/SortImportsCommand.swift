@@ -16,7 +16,7 @@ class SortImportsCommand: NSObject, XCSourceEditorCommand {
 
 		let bridgedLines = invocation.buffer.lines.compactMap { $0 as? String }
 
-		if let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.isImportLine }, ignoreWhenInMiddle: { $0.isBlank }, from: bridgedLines) {
+		if let range = LinesSequenceBuilder().rangeOfSequence(matching: { $0.isImportLine || $0.isBlank }, from: bridgedLines) {
 			Prettifier().prettify(invocation.buffer.lines, in: range)
 		}
 	}

@@ -21,7 +21,7 @@ struct Prettifier {
 
 		trimWhitespaces(from: lines, in: range)
 
-		let linesRemoved = removeBlankLinesInMiddle(lines: lines, in: range)
+		let linesRemoved = removeBlankLines(lines: lines, in: range)
 		range = range.lowerBound...(range.upperBound - linesRemoved)
 
 		LinesSorter().sort(lines, in: range, by: <)
@@ -35,15 +35,12 @@ struct Prettifier {
 		}
 	}
 
-	private func removeBlankLinesInMiddle(lines: NSMutableArray, in range: CountableClosedRange<Int>) -> Int {
+	private func removeBlankLines(lines: NSMutableArray, in range: CountableClosedRange<Int>) -> Int {
 		let range = NSRange(range)
 		let subarray = lines.subarray(with: range) as? [String] ?? []
 		let countBeforeRemoval = lines.count
 
-		let filteredObjects = subarray
-			.enumerated()
-			.filter { index, line in index == 0 || index == subarray.count - 1 || !line.isBlank }
-			.map { $1 }
+		let filteredObjects = subarray.filter { !$0.isBlank }
 
 		lines.replaceObjects(in: range, withObjectsFrom: filteredObjects)
 

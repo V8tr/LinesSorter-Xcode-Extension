@@ -10,21 +10,12 @@ import Foundation
 
 struct LinesSequenceBuilder {
 
-	func rangeOfSequence(
-		matching isMatching: (String) -> Bool,
-		ignoreWhenInMiddle isIgnored: @escaping (String) -> Bool = { _ in false },
-		from lines: [String]
-		) -> CountableClosedRange<Int>? {
-
+	func rangeOfSequence(matching isMatching: (String) -> Bool, from lines: [String]) -> CountableClosedRange<Int>? {
 		var start: Int?
 		var end: Int?
 
-		let isInTheMiddleAndShouldBeIgnored = { (index: Int, line: String) in
-			return index > 0 && index < lines.count - 1 && isIgnored(line)
-		}
-
 		for (index, line) in lines.enumerated() {
-			if isMatching(line) || isInTheMiddleAndShouldBeIgnored(index, line) {
+			if isMatching(line) {
 				if start == nil {
 					start = index
 					end = index

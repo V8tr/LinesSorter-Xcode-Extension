@@ -9,6 +9,7 @@
 import Foundation
 
 extension CountableClosedRange where Bound == Int {
+	
 	func saneRange(for elementsCount: Int) -> CountableClosedRange<Bound> {
 		let lowerBound = Swift.max(self.lowerBound, 0)
 		let upperBound = Swift.min(self.upperBound, Swift.max(0, elementsCount - 1))
