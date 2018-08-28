@@ -16,10 +16,6 @@
 
 # Lines Sorter
 
-[![Travis Status](https://travis-ci.org/V8tr/LinesSorter-Xcode-Extension.svg?branch=master)](https://travis-ci.org/V8tr/LinesSorter-Xcode-Extension)
-[![Swift 4.1](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat)](#)
-[![@V8tr](https://img.shields.io/badge/contact-@V8tr-blue.svg?style=flat)](https://twitter.com/V8tr)
-
 **Lines Sorter** is an Xcode Source Editor extension that makes it easy to keep your import statements and any other long code listst look tidy, uniform and easy-to-read.
 
 ## Features
