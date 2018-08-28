@@ -19,7 +19,7 @@
 
 ## Examples
 
-TBD
+INSERT 2 GIFS HERE
 
 ## Installation
 
@@ -28,9 +28,12 @@ TBD
 - Launch *LinesSorter* once. You can close it immediately afterwards.
 - Go to <kbd>System Preferences</kbd> > <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> > Tick <kbd>LinesSorter</kbd>
 
+INSERT SCREENSHOT HERE
+
 ## Setting Hotkey in Xcode
 
-TBD
+LIST
+SCREENSHOT
 
 ## Feedback
 
