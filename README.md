@@ -32,8 +32,7 @@ INSERT SCREENSHOT HERE
 
 ## Setting Hotkey in Xcode
 
-LIST
-SCREENSHOT
+INSERT STEPS + SCREENSHOT
 
 ## Feedback
 
