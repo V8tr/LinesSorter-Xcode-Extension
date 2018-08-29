@@ -23,3 +23,7 @@ struct LinesSorter {
         }
 	}
 }
+
+func isLowerIgnoringLeadingWhitespacesAndTabs(_ lhs: String, _ rhs: String) -> Bool {
+	return lhs.trimmingCharacters(in: .whitespaces) < rhs.trimmingCharacters(in: .whitespaces)
+}

@@ -42,4 +42,29 @@ class LinesSorterTests: XCTestCase {
 
 		XCTAssertEqual(lines, ["A"])
 	}
+
+	func test_sort_leadingWhitespaces_sortsIgnoringWhitespaces() {
+		let lines = NSMutableArray(array: ["  B", " A"])
+
+		LinesSorter().sort(lines, in: 0...1, by: isLowerIgnoringLeadingWhitespacesAndTabs)
+
+		XCTAssertEqual(lines, [" A", "  B"])
+	}
+
+	func test_sort_leadingTabs_sortsIgnoringTabs() {
+		let lines = NSMutableArray(array: ["\tB", "\tA"])
+
+		LinesSorter().sort(lines, in: 0...1, by: isLowerIgnoringLeadingWhitespacesAndTabs)
+
+		XCTAssertEqual(lines, ["\tA", "\tB"])
+	}
+
+	func test_sort_leadingTabsAndWhitespaces_sortsIgnoringLeadingWhitespacesAndTabs() {
+		
+		let lines = NSMutableArray(array: ["C", " B", "\tA"])
+
+		LinesSorter().sort(lines, in: 0...2, by: isLowerIgnoringLeadingWhitespacesAndTabs)
+
+		XCTAssertEqual(lines, ["\tA", " B", "C"])
+	}
 }
