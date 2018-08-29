@@ -19,7 +19,7 @@
 
 ## Examples
 
-INSERT 2 GIFS HERE
+![Lines Sorter Xcode Extension - Sort Imports Demo](Design/sort-imports.gif)
 
 ## Installation
 
