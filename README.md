@@ -19,7 +19,13 @@
 
 ## Examples
 
+### Sort Imports
+
 ![Lines Sorter Xcode Extension - Sort Imports Demo](Design/sort-imports.gif)
+
+### Sort Selected Lines
+
+![Lines Sorter Xcode Extension - Sort Selected Lines Demo](Design/sort-selected-lines.gif)
 
 ## Installation
 
