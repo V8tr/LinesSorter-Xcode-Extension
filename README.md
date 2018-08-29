@@ -41,8 +41,8 @@
 - Open Xcode
 - Go to Xcode > Preferences > Key Bindings
 - Type *'lines sorter'* in search field
-- Assign <kbd>⌃</kbd> + <kbd>⌘</kbd> + <kbd>⎇</kbd> + <kbd>I</kbd> for *Sort Imports* command
-- Assign <kbd>⌃</kbd> + <kbd>⌘</kbd> + <kbd>⎇</kbd> + <kbd>S</kbd> for *Sort Selected Lines* command
+- Assign <kbd>⌃</kbd> + <kbd>⌘</kbd> + <kbd>⎇</kbd> + <kbd>I</kbd> to *Sort Imports* command
+- Assign <kbd>⌃</kbd> + <kbd>⌘</kbd> + <kbd>⎇</kbd> + <kbd>S</kbd> to *Sort Selected Lines* command
 
 ![Lines Sorter Xcode Extension - Hotkeys](Design/hotkeys.png)
 
