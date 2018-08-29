@@ -28,7 +28,7 @@ INSERT 2 GIFS HERE
 - Launch *LinesSorter* once. You can close it immediately afterwards.
 - Go to <kbd>System Preferences</kbd> > <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> > select <kbd>LinesSorter</kbd>
 
-INSERT SCREENSHOT HERE
+![Lines Sorter Xcode Extension - Installation](Design/installation.png)
 
 ## Setting Hotkey in Xcode
 
