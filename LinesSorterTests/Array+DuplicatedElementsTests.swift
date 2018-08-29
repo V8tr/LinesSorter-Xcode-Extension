@@ -11,7 +11,7 @@ import XCTest
 
 class ArrayDuplicatedElementsTests: XCTestCase
 {
-	func test_duplicatesElementsIndices() {
-		XCTAssertEqual(["A", "A", "B", "B", "A"].duplicatedElementsIndices, Set([1, 3, 4]))
-	}
+    func test_duplicatesElementsIndices() {
+        XCTAssertEqual(["A", "A", "B", "B", "A"].duplicatedElementsIndices, Set([1, 3, 4]))
+    }
 }

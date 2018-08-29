@@ -9,10 +9,10 @@
 import XCTest
 
 class NSRange_ExtTests: XCTestCase {
-
+    
     func test_initWithCountableClosedRange() {
-		XCTAssertEqual(NSRange(0...0), NSRange(location: 0, length: 1))
-
-		XCTAssertEqual(NSRange(1...2), NSRange(location: 1, length: 2))
-	}
+        XCTAssertEqual(NSRange(0...0), NSRange(location: 0, length: 1))
+        
+        XCTAssertEqual(NSRange(1...2), NSRange(location: 1, length: 2))
+    }
 }
