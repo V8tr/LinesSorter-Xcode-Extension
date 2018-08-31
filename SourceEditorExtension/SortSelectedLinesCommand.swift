@@ -27,7 +27,7 @@ class SortSelectedLinesCommand: NSObject, XCSourceEditorCommand {
         
         let range = (firstSelection.start.line...lastSelection.end.line).saneRange(for: invocation.buffer.lines.count)
         
-        LinesSorter().sort(invocation.buffer.lines, in: range, by: <)
+        LinesSorter().sort(invocation.buffer.lines, in: range, by: isLowerIgnoringLeadingWhitespacesAndTabs)
         
         let lastSelectedLine = invocation.buffer.lines[range.upperBound] as? String
         
