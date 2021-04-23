@@ -50,4 +50,4 @@
 
 Pull requests, issues and suggestions are warmly welcome.
 
-Feel free to contact me [@V8tr on Twitter](https://twitter.com/johnsundell).
+Feel free to contact me [@V8tr on Twitter](https://twitter.com/V8tr).
